@@ -15,6 +15,10 @@
 		"go.toolsManagement.checkForUpdates": "local",
 		"go.useLanguageServer": true,
 
+		"go.alternateTools": {
+			"dlv-dap": "/go/bin/dlv"
+		},
+
 		"[go]": {
 			"editor.snippetSuggestions": "none",
 			"editor.formatOnSave": true,
