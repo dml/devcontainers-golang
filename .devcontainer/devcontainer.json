@@ -1,0 +1,38 @@
+{
+	"name": "Go",
+
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+
+	"mounts": [
+		"source=${localWorkspaceFolder},target=/go/src/app,type=bind,consistency=cached"
+	],
+
+	"workspaceFolder": "/go/src/app",
+
+	"settings": {
+		"go.toolsManagement.checkForUpdates": "local",
+		"go.useLanguageServer": true,
+
+		"[go]": {
+			"editor.snippetSuggestions": "none",
+			"editor.formatOnSave": true,
+			"editor.codeActionsOnSave": {
+				"source.organizeImports": true,
+			}
+		},
+
+		"gopls": {
+			"usePlaceholders": true,
+			"completeUnimported": true,
+			"deepCompletion": true,
+		},
+	},
+
+	"extensions": [
+		"golang.Go"
+	]
+
+	// "postCreateCommand": "go mod download"
+}
